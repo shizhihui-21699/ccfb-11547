@@ -1,0 +1,14 @@
+/Users/shizhihui/ccfb/runs/11547/workspace/nts/target/release/deps/thiserror-bd5c7fc10b468411.d: /Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/lib.rs /Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/aserror.rs /Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/display.rs /Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/var.rs /Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/private.rs /Users/shizhihui/ccfb/runs/11547/workspace/nts/target/release/build/thiserror-82bba1f66a42158f/out/private.rs
+
+/Users/shizhihui/ccfb/runs/11547/workspace/nts/target/release/deps/libthiserror-bd5c7fc10b468411.rlib: /Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/lib.rs /Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/aserror.rs /Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/display.rs /Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/var.rs /Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/private.rs /Users/shizhihui/ccfb/runs/11547/workspace/nts/target/release/build/thiserror-82bba1f66a42158f/out/private.rs
+
+/Users/shizhihui/ccfb/runs/11547/workspace/nts/target/release/deps/libthiserror-bd5c7fc10b468411.rmeta: /Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/lib.rs /Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/aserror.rs /Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/display.rs /Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/var.rs /Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/private.rs /Users/shizhihui/ccfb/runs/11547/workspace/nts/target/release/build/thiserror-82bba1f66a42158f/out/private.rs
+
+/Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/lib.rs:
+/Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/aserror.rs:
+/Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/display.rs:
+/Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/var.rs:
+/Users/shizhihui/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/private.rs:
+/Users/shizhihui/ccfb/runs/11547/workspace/nts/target/release/build/thiserror-82bba1f66a42158f/out/private.rs:
+
+# env-dep:OUT_DIR=/Users/shizhihui/ccfb/runs/11547/workspace/nts/target/release/build/thiserror-82bba1f66a42158f/out

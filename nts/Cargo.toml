@@ -1,0 +1,62 @@
+[package]
+name = "nts"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.81"
+description = "RFC 8915 Network Time Security: client, server and NTS-KE"
+license = "MIT OR Apache-2.0"
+
+[workspace]
+members = ["."]
+
+[lib]
+name = "nts"
+path = "src/lib.rs"
+
+[dependencies]
+# TLS 1.3 only: RFC 8915 section 3 forbids anything earlier.
+rustls = { version = "0.23", default-features = false, features = ["ring", "std", "logging"] }
+rustls-pemfile = "2"
+webpki-roots = "0.26"
+rustls-pki-types = "1"
+
+aes-siv = { version = "0.7", default-features = false, features = ["std"] }
+aes-gcm-siv = { version = "0.11", default-features = false, features = ["std", "aes"] }
+aes = "0.8"
+cmac = "0.7"
+hkdf = "0.12"
+sha2 = "0.10"
+zeroize = { version = "1", features = ["derive"] }
+subtle = "2"
+
+rand = "0.8"
+getrandom = "0.2"
+socket2 = "0.5"
+libc = "0.2"
+
+anyhow = "1"
+thiserror = "2"
+clap = { version = "4", features = ["derive", "env"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+hex = "0.4"
+
+[dev-dependencies]
+rcgen = "0.13"
+
+[[bin]]
+name = "nts-client"
+path = "src/bin/nts-client.rs"
+
+[[bin]]
+name = "nts-server"
+path = "src/bin/nts-server.rs"
+
+[[bin]]
+name = "nts-bench"
+path = "src/bin/nts-bench.rs"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+panic = "abort"

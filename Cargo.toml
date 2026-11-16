@@ -1,0 +1,39 @@
+[package]
+name = "nts"
+version = "0.1.0"
+edition = "2021"
+description = "Rust implementation of the Network Time Security client and server (RFC 8915)"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+# TLS 1.3 for NTS-KE (RFC 8915 section 4)
+rustls = { version = "0.23", default-features = false, features = ["ring", "std", "tls12"] }
+rustls-pemfile = "2"
+webpki-roots = "0.26"
+rcgen = "0.13"
+x509-parser = "0.16"
+
+# AEAD: AES-128-GCM (RFC 5116, id 16) via ring; AES-SIV-CMAC-256 (RFC 5297, id 15)
+# hand-rolled on top of aes + cmac so RFC 5297 Appendix A vectors can be checked directly.
+aes = "0.8"
+cmac = "0.7"
+cipher = "0.4"
+ctr = "0.9"
+dbl = "0.3"
+ring = "0.17"
+
+# misc
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+thiserror = "1"
+rand = "0.8"
+byteorder = "1"
+hkdf = "0.12"
+sha2 = "0.10"
+subtle = "2"
+zeroize = { version = "1", features = ["derive"] }
+tempfile = "3"
+
+[profile.release]
+lto = true
+codegen-units = 1

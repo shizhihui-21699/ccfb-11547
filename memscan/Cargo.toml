@@ -1,0 +1,25 @@
+[package]
+name = "memscan"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Cross-platform process memory scanner used to prove secret zeroization"
+
+[dependencies]
+libc.workspace = true
+memchr = "2.8"
+aho-corasick = "1.1"
+zeroize = { version = "1.9", default-features = false, features = ["alloc"] }
+secret-vault = { path = "../secret-vault" }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+mach2 = "0.6"
+
+[[bin]]
+name = "memscan"
+path = "src/main.rs"
+
+[lib]
+name = "memscan"
+path = "src/lib.rs"

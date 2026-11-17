@@ -1,0 +1,16 @@
+[package]
+name = "demo-service"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Demo auth service: naive vs secret-vault hardened implementation"
+
+[dependencies]
+libc.workspace = true
+secret-vault = { path = "../secret-vault" }
+memscan = { path = "../memscan" }
+hmac = "0.12"
+sha2 = "0.10"
+subtle = "2.6"
+zeroize = { version = "1.9", default-features = false, features = ["alloc"] }

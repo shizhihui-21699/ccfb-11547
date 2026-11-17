@@ -1,0 +1,24 @@
+[workspace]
+resolver = "2"
+members = ["secret-vault", "memscan", "demo-service"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+license = "MIT"
+
+[workspace.dependencies]
+libc = "0.2"
+
+[profile.release]
+# 关键: panic 时直接 abort 而不是 unwind。
+# unwind 会在栈上展开、运行析构逻辑, 任何疏漏都会让敏感数据多活很久;
+# abort 让进程立刻死掉, 已 mlock 的匿名页随进程销毁整体回收。
+panic = "abort"
+opt-level = 3
+lto = "thin"
+
+[profile.dev]
+# 开发/测试期也保持 abort 语义, 保证验证结果与生产一致
+panic = "abort"

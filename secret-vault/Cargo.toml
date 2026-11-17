@@ -1,0 +1,23 @@
+[package]
+name = "secret-vault"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Sensitive-data containers: mmap+mlock backed buffers that zeroize on every path"
+
+[dependencies]
+libc.workspace = true
+zeroize = { version = "1.9", default-features = false, features = ["alloc"] }
+
+[features]
+default = ["std"]
+std = []
+# 启用后 SecretBuf 扩容/释放时多做一次 madvise(MADV_DONTNEED),
+# 让内核尽快回收物理页 (页可能被合并/复用前先断开)
+madvise = []
+
+[dev-dependencies]
+memscan = { path = "../memscan" }
+libc.workspace = true
+zeroize = { version = "1.9", default-features = false, features = ["alloc"] }

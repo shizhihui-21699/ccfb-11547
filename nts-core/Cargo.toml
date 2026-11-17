@@ -1,0 +1,18 @@
+[package]
+name = "nts-core"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+aes-siv.workspace = true
+aes-gcm-siv.workspace = true
+hkdf.workspace = true
+sha2.workspace = true
+zeroize.workspace = true
+rand.workspace = true
+subtle.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+hex.workspace = true

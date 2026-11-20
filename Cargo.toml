@@ -1,0 +1,21 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/secretmem",
+    "crates/memcanary",
+    "crates/demo-service",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+license = "MIT OR Apache-2.0"
+
+# The auditor's inner loop is hash-bound; unoptimised tests take minutes.
+[profile.test]
+opt-level = 2
+
+[profile.release]
+debug = 1          # keep line tables: the memory auditor symbolises addresses
+overflow-checks = true

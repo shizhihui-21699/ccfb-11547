@@ -1,0 +1,24 @@
+[package]
+name = "demo-service"
+description = "Example auth service: naive vs secretmem, with stage-by-stage memory evidence"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+secretmem = { path = "../secretmem" }
+memcanary = { path = "../memcanary" }
+sha2 = "0.10"
+hmac = "0.12"
+getrandom = "0.3"
+subtle = "2"
+serde_json = "1"
+
+[dependencies.clap]
+version = "4"
+features = ["derive"]
+
+[[bin]]
+name = "memcanary-cli"
+path = "src/bin/memcanary_cli/main.rs"

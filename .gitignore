@@ -16,3 +16,8 @@ node_modules/
 __pycache__/
 .venv/
 venv/
+
+# Build output
+/target/
+# Generated audit reports (contain real addresses from the host)
+/reports/

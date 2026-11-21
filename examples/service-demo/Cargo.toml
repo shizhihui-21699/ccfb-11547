@@ -1,0 +1,20 @@
+[package]
+name = "service-demo"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "A toy auth/session service, switchable between plain secrets and sealedmem, with self-verification"
+
+[[bin]]
+name = "service-demo"
+path = "src/main.rs"
+
+[dependencies]
+libc.workspace = true
+zeroize.workspace = true
+subtle.workspace = true
+sha2.workspace = true
+hmac.workspace = true
+getrandom.workspace = true
+sealedmem = { path = "../../crates/sealedmem" }

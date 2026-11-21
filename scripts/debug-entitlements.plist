@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <!--
+    com.apple.security.get-task-allow marks a binary as debuggable by the same
+    user.  It is what Xcode sets on debug builds so lldb can attach.  We sign the
+    demo and the scanner with it *only* so the verification harness can read the
+    demo's memory the way a debugger would.  A production build must NOT carry
+    this entitlement: without it, task_for_pid is refused and this whole attack
+    path is unavailable.
+  -->
+  <key>com.apple.security.get-task-allow</key>
+  <true/>
+</dict>
+</plist>

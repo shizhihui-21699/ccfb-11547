@@ -1,0 +1,27 @@
+[package]
+name = "residue"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Residue scanner: captures a live process's memory at defined stages and searches it for canary secrets"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "residue"
+path = "src/main.rs"
+
+[dependencies]
+libc.workspace = true
+memchr.workspace = true
+sealedmem = { path = "../sealedmem" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[dev-dependencies]
+
+[[example]]
+name = "bench"
+path = "examples/bench.rs"
